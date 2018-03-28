@@ -43,6 +43,7 @@ def valid_move?(array, index)
   end
 end
 
+<<<<<<< HEAD
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
@@ -52,6 +53,17 @@ def turn(board)
     display_board(board)
   else
     turn(board)
+=======
+def turn(array)
+  puts "Please enter 1-9:"
+  input = gets.strip
+  index = input_to_index(input)
+  if valid_move?(array, index)
+    move(array, index)
+    display_board(array)
+  else
+    turn(array)
+>>>>>>> 61c28b423320f5ec1906c78b12d893bdad29ff43
   end
 end
 
@@ -67,6 +79,7 @@ def turn_count(array)
   return counter
 end
 
+<<<<<<< HEAD
 def current_player(board)
   if (turn_count(board).even? == true)
     return "X"
@@ -154,5 +167,8 @@ def play(board)
   else
     #do nothing
   end
+=======
+def current_player
+>>>>>>> 61c28b423320f5ec1906c78b12d893bdad29ff43
 end
 
